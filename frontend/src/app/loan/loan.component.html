@@ -1,0 +1,121 @@
+<div>
+<img src="assets/personal.png" alt="" width="1440px">
+</div>
+<div class="container-fluid">
+   
+<div class="row d-flex"> 
+  <div class="col-md-6">
+<div class="container">
+<form [formGroup]="formone" class="my-form" >
+    <div class="mb-3">
+      
+      <label for="loanamount" class="form-label">Loan Amount:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+        <span>{{ formone.value.loanamount | number }}</span>
+    </div>
+      <input type="range" id="loanamount" formControlName="loanamount" class="form-range" min="1000000" max="10000000" step="50000">
+      
+      
+      <div class="d-flex justify-content-between">
+        <label>₹10L</label>
+        <label>₹10Cr</label>
+      </div>
+     
+    </div>
+  
+    <div class="mb-3">
+      <label for="numberofyear" class="form-label">Number Of Year:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+        <span>{{ formone.value.numberofyear| number }}</span>
+    </div>
+      <input type="range" id="numberofyear" formControlName="numberofyear" class="form-range" min="1" max="20" step="1">
+      <div class="d-flex justify-content-between">
+        <label>1year</label>
+        <label>20year</label>
+      </div>
+      
+    </div>
+  
+    <div class="mb-3">
+      <label for="rateofinterset" class="form-label">Rate Of Interest:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+        <span>{{ formone.value.rateofinterset | number }}</span>
+    </div>
+      <input type="range" id="rateofinterset" formControlName="rateofinterset" class="form-range" min="7" max="15" step="0.5">
+      <div class="d-flex justify-content-between">
+        <label>7%</label>
+        <label>15%</label>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="monthlysalary" class="form-label">Monthly Salary:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+        <span>{{ formone.value.monthlysalary| number }}</span>
+    </div>
+      <input type="range" id="monthlysalary" formControlName="monthlysalary" class="form-range" min="35000" max="500000" step="5000">
+      <div class="d-flex justify-content-between">
+        <label>₹35K</label>
+        <label>₹5L</label>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="anualincome" class="form-label">Annual Income:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+        <span>{{ formone.value.anualincome| number }}</span>
+    </div>
+      <input type="range" id="anualincome" formControlName="anualincome" class="form-range" min="200000" max="1000000" step="10000">
+      <div class="d-flex justify-content-between">
+        <label>₹2L</label>
+        <label>₹10L</label>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="incometaxnumber" class="form-label">Income Tax Number:</label>
+      <input type="number" id="incometaxnumber" formControlName="incometaxnumber" class="form-control">
+    </div>
+
+    
+  
+    <button type="button" class="btn btn-primary" (click)="submit()" [disabled]="formone.invalid">Apply</button>
+  </form>
+</div>
+
+   </div>
+<div class="col-md-6" style="margin-top: 40px;">
+  <div class="container">
+    <div class="result-item">
+      <div >
+        <img  src="assets/loan.png" >
+      </div>
+    <label for="emi" class="form-label">EMI:</label>
+    <div class="d-flex justify-content-between" style="color: red;">
+        <span>Monthly EMI :
+          {{ calculateEMI() | number }} ₹</span> 
+        <span>💸</span> 
+    </div>
+    </div>
+    <div class="result-item">
+    <label for="interest" class="form-label">Interest:</label>
+    <div class="d-flex justify-content-between" style="color: red;">
+        <span>Total interest payable over the loan term :{{ calculateInterest() | number }} ₹</span> 
+        <span>💸</span> 
+    </div>
+    </div>
+    <div class="result-item">
+      <label for="Total" class="form-label">Total Amount:</label>
+      <div class="d-flex justify-content-between" style="color: red;">
+          <span>Total Amount :{{ calculatetolal() | number }} ₹</span> 
+          <span>💸</span> 
+      </div>
+      </div>
+  </div>
+</div>
+   </div>
+</div>
+<div class="container" style="margin-left: 9%;margin-top: 2%;">
+  <img src="assets/27.png" alt="">
+
+</div>

@@ -1,0 +1,29 @@
+<table>
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Account No</th>
+            <th>Branch</th>
+            <th>IFSC code</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of transaction;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{s.accountno}}</td>
+            <td>{{s.branch}}</td>
+            <td>{{s.ifsccode}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.amount}}</td>
+            <td>{{s.date}}</td>
+            <td>
+            
+            <button (click)="delete(s.id)">delete</button>
+            
+            </td>
+        </tr>
+    </tbody>
+</table>

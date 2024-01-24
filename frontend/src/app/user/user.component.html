@@ -1,0 +1,166 @@
+<div>
+  <img src="assets/saving.png" alt="" style="height: 100%;width: 100%;">
+</div>
+<div>
+  <div class="row">
+<div class="col-md-6" style="margin-top: 10px;">
+
+<form [formGroup]="FormOne" class="custom-form">
+    
+      <p class="h4" style="color: blue;">Create New Account</p>
+      
+          <input type="text" class="form-control" placeholder="Name" formControlName="name">
+          <div>
+          <div *ngIf="FormOne.get('name')?.hasError('required') && FormOne.get('name')?.touched" style="color: red;">
+            Name is required.
+          </div>
+          <div *ngIf="FormOne.get('name')?.hasError('minlength') && FormOne.get('name')?.touched" style="color: red;">
+            Name must be at least 3 characters long.
+          </div>
+          </div>
+    
+          <br>
+          <input type="text" class="form-control" placeholder="Father Name" formControlName="fathername">
+          <div>
+            <div *ngIf="FormOne.get('fathername')?.hasError('required') && FormOne.get('fathername')?.touched" style="color: red;">
+              Father Name is required.
+            </div>
+            <div *ngIf="FormOne.get('fathername')?.hasError('minlength') && FormOne.get('name')?.touched" style="color: red;">
+              Name must be at least 3 characters long.
+            </div>
+            </div>
+        <br>
+          <input type="number" class="form-control" placeholder="Age" formControlName="age"><br>
+          <div>
+            <div *ngIf="FormOne.get('age')?.hasError('required') && FormOne.get('age')?.touched" style="color: red;">
+              Age is required.
+            </div>
+            <div *ngIf="FormOne.get('age')?.hasError('min') && FormOne.get('age')?.touched" style="color: red;">
+              Age must be 18 or older.
+            </div>
+            </div>
+          <label >gender</label><br>
+          <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" formControlName="gender">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" formControlName="gender">
+
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other" formControlName="gender"><br>
+
+            <input type="number"class="form-control" placeholder="Mobile No" formControlName="mobile">
+            <div>
+              <div *ngIf="FormOne.get('mobile')?.hasError('required') && FormOne.get('mobile')?.touched" style="color: red;">
+                Mobile Number is required.
+              </div>
+              <div *ngIf="FormOne.get('mobile')?.hasError('pattern') && FormOne.get('mobile')?.touched" style="color: red;">
+                Please enter a valid 10-digit Mobile No.              </div>
+              </div>
+        <br>
+
+            <input type="number" class="form-control" placeholder="Aadhar No" formControlName="aadharno">
+            <div>
+              <div *ngIf="FormOne.get('aadharno')?.hasError('required') && FormOne.get('aadharno')?.touched" style="color: red;">
+                Aadhar No is required.              </div>
+              <div *ngIf="FormOne.get('aadharno')?.hasError('pattern') && FormOne.get('aadharno')?.touched" style="color: red;">
+                Please enter a valid 12-digit Aadhar No.              
+              </div>
+              </div>
+              <br>
+            <input type="text"class="form-control" placeholder="PAN No" formControlName="panno">
+            <div>
+              <div *ngIf="FormOne.get('panno')?.hasError('required') && FormOne.get('panno')?.touched" style="color: red;">
+                PAN No is required.     
+                       </div>
+              <div *ngIf="FormOne.get('panno')?.hasError('pattern') && FormOne.get('panno')?.touched" style="color: red;">
+                Please enter a valid PAN No.            
+                </div>
+              </div>
+              <br>
+            <input type="text" class="form-control"placeholder="Address" formControlName="address">
+            <div>
+              <div *ngIf="FormOne.get('address')?.hasError('required') && FormOne.get('address')?.touched" style="color: red;">
+                Address is required.   
+                       </div>
+              <div *ngIf="FormOne.get('address')?.hasError('minlength') && FormOne.get('address')?.touched" style="color: red;">
+                Address must be at least 5 characters long.            
+                </div>
+              </div>
+
+    <br>
+      <input type="text" class="form-control" placeholder="Mail id" id="email" name="email" formControlName="email">
+      <div>
+        <div *ngIf="FormOne.get('email')?.hasError('required') && FormOne.get('email')?.touched" style="color: red;">
+          Email is required.
+        </div>
+        <div *ngIf="FormOne.get('email')?.hasError('email') && FormOne.get('email')?.touched" style="color: red;">
+          Email id invalid.
+        </div>
+        </div>
+  <br>
+      
+      <input type="password" class="form-control" placeholder="Password" id="password" name="password" formControlName="password">
+      <div *ngIf="FormOne.get('password')?.hasError('required') && FormOne.get('password')?.touched" style="color: red;">
+        Password is required.
+      </div>
+      <br>
+      <input type="text" class="form-control" placeholder="roles" id="roles" name="roles" formControlName="roles">
+      <div *ngIf="FormOne.get('roles')?.hasError('required') && FormOne.get('roles')?.touched" style="color: red;">
+        Roles is required.
+      </div>
+      
+  
+      <button class="btn btn-primary" (click)="sub()" [disabled]="FormOne.invalid">Submit</button>
+      <button type="button" class="btn btn-danger " (click)="cancel()">Cancel</button>
+    
+    
+  </form>
+</div>
+<div class="col-md-6">
+  <div class="container">
+    <div>
+      <img src="assets/saving1.png" alt="">
+    </div>
+  <div>
+    <h3>Savings Value </h3>
+    <h3>Account</h3>
+    <div class="account-details">
+      <p>
+        <strong>₹10,000</strong>
+        <span>Average Monthly Balance</span>
+      </p>
+      
+      <p>
+        <strong>₹50,000</strong>
+        <span>Freedom from AMB subject to FD</span>
+      </p>
+      
+      <p>
+        <strong>Quarterly</strong>
+        <span>Interest Payout</span>
+      </p>
+      
+      <p>
+        <strong>₹249</strong>
+        <span>Annual Fee</span>
+      </p>
+      
+      <p>
+        <strong>ELEMENT Debit Card</strong>
+      </p>
+      
+      <p>
+        <strong>10%</strong>
+        <span>DEMAT AMC waiver for 1st year</span>
+      </p>
+    </div>
+    
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="container" style="margin-top: 2%;">
+  <img src="assets/home1.png" alt="">
+</div>

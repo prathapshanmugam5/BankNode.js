@@ -1,0 +1,22 @@
+.offcanvas-header {
+    background-color: #343a40; /* Bootstrap dark background color */
+    color: #ffffff; /* Text color */
+    padding: 1rem;
+    border-bottom: 1px solid #495057; /* Bootstrap dark border color */
+  }
+
+  .offcanvas-body {
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000000; /* Default text color */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Bootstrap primary color on hover */
+  }
+  .custom-btn-group {
+    margin-bottom: 10px; /* Adjust the value to set the desired gap */
+  }
+  

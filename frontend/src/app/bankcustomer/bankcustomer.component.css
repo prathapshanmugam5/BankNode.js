@@ -1,0 +1,26 @@
+/* styles.css */
+.container {
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid #ccc; /* Border color and thickness */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 8px; 
+  }
+  
+  .mt-5 {
+    margin-top: 3rem;
+  }
+  
+  .text-danger {
+    color: red;
+    font-size: 0.875rem; /* Adjust font size as needed */
+  }
+  .form-control {
+    border-width: 2px;
+  }
+  
+  /* Optionally, you can add focus styles for the input boxes */
+  .form-control:focus {
+    border-color: #4CAF50; /* Change to your desired color */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Change to your desired shadow */
+  }

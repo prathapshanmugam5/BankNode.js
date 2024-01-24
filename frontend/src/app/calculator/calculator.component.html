@@ -1,0 +1,156 @@
+<div class="image1-container">
+    <img src="assets/10.png" alt="" style="width: 100%;">
+   
+  </div>
+  <div style="margin-top: 2%;">
+    <div class="row d-flex">
+      <div class="col-md-8">
+        <div class="container">
+          <marquee width="100%" direction="right" height="100px">
+            <div class="image-container">
+              <div class="image"> 
+                <img src="assets/11.png" alt="Image 1">
+              </div>
+              <div class="image"> 
+                <img src="assets/12.png" alt="Image 1">
+              </div>
+              <div class="image"> 
+                <img src="assets/13.png" alt="Image 1">
+              
+              </div>
+              <div class="image"> 
+                <img src="assets/14.png" alt="Image 1">
+             
+              </div>
+              <div class="image" > 
+                  <img src="assets/15.png" alt="Image 1">
+                  
+                </div>
+                <div class="image"> 
+                  <img src="assets/16.png" alt="Image 1">
+               
+                </div>
+                <div class="image"> 
+                  <img src="assets/17.png" alt="Image 1">
+                
+                </div>
+            </div>
+          </marquee>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="container">
+         <div style="margin-top: 23%;">
+          <h3>Experience the joy</h3>
+          <h3>of spending with</h3>
+          <h3>additional benefits</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 13%;">
+    <form [formGroup]="FormOne">
+    <div class="container">
+    <label for="bankcustmer" style="color: blue;">Are you an existing YES BANK customer?*</label><br>
+    <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="bankcustmer" value="yes" formControlName="bankcustmer">
+            <br>
+            <label for="no">No</label>
+            <input type="radio" id="no" name="bankcustmer" value="no" formControlName="bankcustmer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+              <label>PAN*</label><br>
+              <input type="text" name="pan" formControlName="pan">
+              
+              <div style="color: red;" *ngIf="FormOne.get('pan')?.hasError('pattern') && FormOne.get('pan')?.touched">
+                PAN should follow a specific pattern.
+              </div>
+              
+            </div>
+            <div class="col-md-6">
+              <label>Mobile*</label><br>
+              <input type="number" name="mobile" formControlName="mobile">
+              <div style="color: red;" *ngIf="FormOne.get('mobile')?.hasError('pattern') && FormOne.get('mobile')?.touched">
+                Mobile number should start with 6, 7, 8, or 9.
+              </div>
+              <p>Please enter Aadhaar linked mobile number. One Time Password will be sent to this number. </p>
+            </div>
+            </div>
+            </div>
+            <h2 style="color: blue;font-weight: bold;">Occupation<span style="color: red;">*</span></h2>
+
+            <div>
+              <button type="button" class="btn btn-secondary " name="occupation" value="salaried" (click)="setoccupation('salaried')">Residence</button>
+              <span style="margin: 0 10px;"></span>
+              <button type="button" class="btn btn-secondary" name="occupation" value="self employed" (click)="setoccupation('self employed')">Office</button>
+            </div><br>
+            <div>
+              <label>You Organization Name*(Where do you work?)</label><br>
+              <input type="text" name="organization" formControlName="organization">
+              <div style="color: red;" *ngIf="FormOne.get('organization')?.hasError('required')&& FormOne.get('organization')?.touched">
+                Organization is required.
+              </div>
+            </div><br><br>
+
+            <p>Please provide your office address .kindly note this address should not be the same as your residence address</p>
+            <br>
+            <h2 style="color: blue;font-weight: bolder;">Mention Your Office Address</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+            <label>Address line1*</label><br>
+            <input type="text" name="addresslineone" formControlName="addresslineone">
+            <div style="color: red;" *ngIf="FormOne.get('addresslineone')?.hasError('required') && FormOne.get('addresslineone')?.touched">
+              Addressline1 is required.
+            </div>
+            <br><br>
+            <label for="pincode">Pincode*</label><br>
+            <input type="number" name="pincode" formControlName="pincode">
+            <div style="color: red;" *ngIf="FormOne.get('pincode')?.hasError('required') && FormOne.get('pincode')?.touched">
+              Pincode is required.
+            </div>
+            <div style="color: red;" *ngIf="FormOne.get('pincode')?.hasError('pattern') && FormOne.get('pincode')?.touched">
+              Pincode should be a 6-digit number.
+            </div>
+          
+            
+            </div>
+            <div class="col-md-6">
+              <label for="addresslinetwo">Address line2*</label><br>
+              <input type="text" name="addresslinetwo" formControlName="addresslinetwo">
+              <div style="color: red;" *ngIf="FormOne.get('addresslinetwo')?.hasError('required') && FormOne.get('addresslinetwo')?.touched">
+                Addressline2 is required.
+              </div>
+              <br><br>
+              <label for="city">City*</label><br>
+              <input type="text" name="city" formControlName="city">
+            </div>
+            </div>
+            </div><br>
+            <div>
+            <h3 style="color: blue;">Choose your preferred communication address</h3>     
+            <button type="button" name="communication" class="btn btn-secondary" value="Residence" (click)="setCommunication('Residence')">Residence</button>
+            <span style="margin: 0 10px;"></span>
+            <button type="button" name="communication" class="btn btn-secondary" value="Office" (click)="setCommunication('Office')">Office</button>
+            </div>
+            <p>Bank will be sending your card and other communication on this address</p>
+            <label for="salary"> Monthly Salary*</label><br>
+            <input type="number" name="salary" formControlName="salary"><br>
+            <div style="color: red;" *ngIf="FormOne.get('salary')?.hasError('required') && FormOne.get('salary')?.touched">
+              Salary is required.
+            </div>
+            <div style="color: red;" *ngIf="FormOne.get('salary')?.hasError('min') && FormOne.get('salary')?.touched">
+              Salary should be a 20000k
+            </div>
+
+        <input type="checkbox"> <p>I/We authorise YES BANK to make any enquiries regarding my application, including without limitation, to carry out verification /validations /authenticity check of my documents / information so provided in my application or gathered through the device I have applied through, by using technology enabled algorithms or processes (either by itself or through its various service providers) & give consent to the Bank to disclose, without notice to me/us, information furnished by me/us in application form(s)/related documents executed in relation to the facilities availed from the Bank, other branches/subsidiaries/affiliates, credit bureaus/rating agencies, service providers and/or their agents/partners/ vendors whether located in India or overseas, as it deems fit. </p>
+        <input type="checkbox"><p>By clicking the checkbox, you hereby give your consent and authorize Yes Bank to initiate your application through online Prefill product provided by TransUnion CIBIL basis name and mobile number submitted by you. You hereby also agree that in case of any error or mistake in any of the field during prefill of application, you shall inform us immediately for rectifying such</p>
+        
+        <button type="button" class="btn btn-danger" (click)="submit()" [disabled]="FormOne.invalid">SAVE & CONTINUE</button>
+       
+  </div>
+    </form>
+  </div>
+  

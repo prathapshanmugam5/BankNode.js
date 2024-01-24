@@ -1,0 +1,45 @@
+<form [formGroup]="FormOne" class="container mt-5">
+    <h1 style="color: blue;">Fund Transfer</h1>
+    <div class="form-group">
+      <label for="accountno">Account No</label>
+      <input type="number" class="form-control" id="accountno" name="accountno" formControlName="accountno">
+      <div *ngIf="FormOne.get('accountno')?.hasError('required') && FormOne.get('accountno')?.touched" class="text-danger">
+        Account Number is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="branch">Branch</label>
+      <input type="text" class="form-control" id="branch" name="branch" formControlName="branch">
+      <div *ngIf="FormOne.get('branch')?.hasError('required') && FormOne.get('branch')?.touched" class="text-danger">
+        Branch is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="ifsccode">IFSC CODE</label>
+      <input type="text" class="form-control" id="ifsccode" name="ifsccode" formControlName="ifsccode">
+      <div *ngIf="FormOne.get('ifsccode')?.hasError('required') && FormOne.get('ifsccode')?.touched" class="text-danger">
+        IFSC Code Number is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="name">USER Name</label>
+      <input type="text" class="form-control" id="name" name="name" formControlName="name">
+      <div *ngIf="FormOne.get('name')?.hasError('required') && FormOne.get('name')?.touched" class="text-danger">
+        Account Holder Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" class="form-control" id="amount" name="amount" formControlName="amount">
+      <div *ngIf="FormOne.get('amount')?.hasError('required') && FormOne.get('amount')?.touched" class="text-danger">
+        Amount is required.
+      </div>
+    </div>
+  
+    <button class="btn btn-primary" (click)="sub()" [disabled]="FormOne.invalid">Submit</button>
+    
+  </form>
+  

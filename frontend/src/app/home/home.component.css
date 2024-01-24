@@ -1,0 +1,133 @@
+.background{
+    background-color: white;
+}
+.offcanvas-header {
+    background-color: #343a40; /* Bootstrap dark background color */
+    color: #ffffff; /* Text color */
+    padding: 1rem;
+    border-bottom: 1px solid #495057; /* Bootstrap dark border color */
+  }
+
+  .offcanvas-body {
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000000; /* Default text color */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Bootstrap primary color on hover */
+  }
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.image {
+  position: relative; 
+    flex: 1; /* Distribute available space equally among images */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-right: 10px; 
+}
+
+.image img {
+    width: 100%; /* Make the image fill the entire container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    
+}
+.apply-button {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Adjust to center the button using transform */
+  background-color: #dc3545; /* Danger color (red) */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0; /* Initially hide the button */
+    transition: opacity 0.3s ease-in-out; 
+}
+.apply-button1 {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Adjust to center the button using transform */
+  background-color: #dc3545; /* Danger color (red) */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0; /* Initially hide the button */
+  transition: opacity 0.3s ease-in-out; 
+}
+.apply-button2 {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Adjust to center the button using transform */
+  background-color: #dc3545; /* Danger color (red) */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0; /* Initially hide the button */
+  transition: opacity 0.3s ease-in-out; 
+}
+.apply-button3 {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Adjust to center the button using transform */
+  background-color: #dc3545; /* Danger color (red) */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0; /* Initially hide the button */
+  transition: opacity 0.3s ease-in-out; 
+}
+.image:hover .apply-button {
+  opacity: 1; /* Show the button on hover */
+}
+.image:hover .apply-button1 {
+  opacity: 1; /* Show the button on hover */
+}
+.image:hover .apply-button2 {
+  opacity: 1; /* Show the button on hover */
+}
+.image:hover .apply-button3 {
+  opacity: 1; /* Show the button on hover */
+}
+.image1-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; 
+}
+
+.image1 {
+  position: relative; 
+    flex: 1; /* Distribute available space equally among images */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-right: 10px;  /* Add margin for spacing between images */
+}
+
+.image1 img {
+  width: 100%; /* Make sure the image takes the full width of its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  
+}
+
+.image1:hover {
+  border: 2px solid blue; /* Change border color to blue on hover */
+}
+

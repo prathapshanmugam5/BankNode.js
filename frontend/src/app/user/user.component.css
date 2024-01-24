@@ -1,0 +1,74 @@
+.login_oueter {
+    width: 360px;
+    max-width: 100%;
+}
+.logo_outer{
+    text-align: center;
+}
+.logo_outer img{
+    width:120px;
+    margin-bottom: 40px;
+}
+.custom-form {
+    max-width: 400px; /* Set the maximum width of the form */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding to the form */
+  }
+  
+  /* Optional: Add more styles based on your preferences */
+  /* styles.css */
+
+.custom-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-form p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-primary,
+  .btn-danger {
+    margin-right: 10px;
+  }
+  
+  .text-danger {
+    font-size: 0.9em;
+  }
+  .account-details {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .account-details p {
+    margin-bottom: 10px;
+  }
+  
+  .account-details strong {
+    font-size: 1.2em;
+    color: #007bff; /* Blue color */
+  }
+  
+  .account-details span {
+    margin-left: 10px;
+  }
+  

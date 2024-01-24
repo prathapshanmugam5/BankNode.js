@@ -1,0 +1,37 @@
+
+
+<div style="position: relative; margin-left: 9%;">
+  <img src="assets/home.png" alt="" >
+  <div style="position: absolute; top: 20%; left: 5%;  width: 100%;">
+    <h1 style="color: white;">YES First</h1>
+    <h1 style="color: white;">Welcome to a world of</h1>
+    <h1 style="color: white;">extraordinary experiences</h1>
+  </div>
+</div>
+
+<div class="row">
+<div class="container mt-5">
+  
+    <div class="card">
+      
+      <div class="card-header">
+        <h2 class="text-center" style="color:darkblue;">Login</h2>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="loginForm" >
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter your userName">
+          
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-info" (click)="on()">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  
